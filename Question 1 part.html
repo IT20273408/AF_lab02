@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 1 part</title>
+</head>
+<body>
+<script type="text/javascript">
+    function getValue(callback) {
+        let value = 0;
+        setTimeOut(function() {
+            value = 10;
+            callback(value);
+        }, 1000);
+    }
+getValue(function (value) {
+    console.log(value);
+});
+
+</script>
+
+</body>
+</html>
