@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 3</title>
+</head>
+<body>
+<script type="text/javascript">
+  function getValue() {
+    let value = 0;
+    //resolve is sucess
+    //reject is error
+
+    return new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        value = 10;
+        resolve(value);
+      }, 1000);
+    });
+
+  }
+  function getNewValue(value, callback) {
+    setTimeout(function() {
+      callback (value * 100);
+    }, 1000);
+  }
+  getValue(). then(function (vallue) {
+    console.log(value);
+  });
+</script>
+
+</body>
+</html>

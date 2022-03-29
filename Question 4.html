@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 5</title>
+</head>
+<body>
+<script type="text/javascript">
+    function getValue() {
+        let value=0;
+        return new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                value = 10;
+                resolve(value);
+            },1000);
+        });
+    }
+    function getNewValue(value) {
+        return  new promise (function (resolve, reject) {
+            setTimeout(function() {
+                resolve (value * 1000);
+            }, 1000);
+        });
+    }
+    function setValue(value) {
+        return value + 1999;
+    }
+    async function print() {
+        let value  = await getValue();
+        try {
+            value = await getNewValue(value);
+        }catch (e) {
+            //do
+        }
+    value = setVaue(value);
+    return value;
+    }
+    print().then(function (value) {
+        console.log(value);
+    });
+</script>
+
+</body>
+</html>
